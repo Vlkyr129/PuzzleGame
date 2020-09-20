@@ -15,6 +15,12 @@ public class pickUpObject : MonoBehaviour
     bool isBeingCarried = false;
     bool collideWorld = false;
     float timePassed;
+    Vector3 originalSize;
+
+    private void Start()
+    {
+        originalSize = transform.localScale;
+    }
 
     private void Update()
     {
@@ -24,6 +30,8 @@ public class pickUpObject : MonoBehaviour
 
         if (distanceToObject <= pickUpDistance && Input.GetMouseButtonDown(0) && isBeingCarried == false)
         {
+            //Dotween Used!!!!
+            transform.DOPunchScale(Vector3.one, 1);
             GetComponent<Rigidbody>().isKinematic = true;
             transform.parent = playerCamera;
             isBeingCarried = true;
@@ -62,6 +70,7 @@ public class pickUpObject : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             transform.position = new Vector3(0, 10, 0);
+            transform.localScale = originalSize;
         }
     }
 
