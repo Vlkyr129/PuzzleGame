@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class EscapeDoor : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if(collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("TheEnd");
+            SceneManager.LoadScene(1);
         }
     }
 }

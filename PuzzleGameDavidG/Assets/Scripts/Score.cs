@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class TimerSingleton : MonoBehaviour
+public class Score : MonoBehaviour
 {
-    public TextMeshProUGUI timerText;
-    public int timer;
+    public TextMeshProUGUI scoreText;
+    private int score;
 
-    public static TimerSingleton instance;
+    public static Score instance;
 
     private void Awake()
     {
@@ -18,12 +18,13 @@ public class TimerSingleton : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);        
+            Destroy(gameObject);
         }
     }
 
-    public void addTimer()
+    public void AddScore()
     {
-        timer++;
+        score++;
+        scoreText.text = score.ToString();
     }
 }

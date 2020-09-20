@@ -36,6 +36,8 @@ public class pickUpObject : MonoBehaviour
             transform.parent = playerCamera;
             isBeingCarried = true;
             timePassed = 0;
+            //Singleton
+            Score.instance.AddScore();
         }
         if (isBeingCarried && timePassed >= 1)
         {
