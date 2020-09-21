@@ -358,7 +358,7 @@ GameObject:
   - component: {fileID: 714139906}
   - component: {fileID: 714139905}
   m_Layer: 0
-  m_Name: Singleton Holder
+  m_Name: Score Holder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1482,7 +1482,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4416768630886165923, guid: 329e48af80dcd7d4ca2417279757bd18, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4416768630886165923, guid: 329e48af80dcd7d4ca2417279757bd18, type: 3}
       propertyPath: m_LocalPosition.z
